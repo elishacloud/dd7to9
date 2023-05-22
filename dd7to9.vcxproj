@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{579E7FE7-2745-4100-A802-23511711FCDE}</ProjectGuid>
+    <RootNamespace>dd7to9</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\Intermediate\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>ddraw</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\Intermediate\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>ddraw</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;DDRAW;ENABLE_DEBUGOVERLAY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <ObjectFileName>$(SolutionDir)bin\Intermediate\$(Configuration)\Object\%(RelativeDir)</ObjectFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <AdditionalIncludeDirectories>$(ProjectDir)dxwrapper\;dxwrapper\Libraries;dxwrapper\Libraries\DirectX81SDK\include;dxwrapper\External\imgui</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>detours.lib;dxguid.lib;msimg32.lib;oleacc.lib;uxtheme.lib;dwmapi.lib;wbemuuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>dd7to9.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>dxwrapper\Libraries\detours\lib</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>dxwrapper\</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;DDRAW;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ObjectFileName>$(SolutionDir)bin\Intermediate\$(Configuration)\Object\%(RelativeDir)</ObjectFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>$(ProjectDir)dxwrapper\;dxwrapper\Libraries;dxwrapper\Libraries\DirectX81SDK\include;dxwrapper\External\imgui</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>detours.lib;dxguid.lib;msimg32.lib;oleacc.lib;uxtheme.lib;dwmapi.lib;wbemuuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>dd7to9.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>dxwrapper\Libraries\detours\lib</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>dxwrapper\</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dd7to9.cpp" />
+    <ClCompile Include="dxwrapper\D3DDDI\d3dddi.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\ddraw.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\DebugOverlay.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DDeviceX.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DMaterialX.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DTextureX.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DTypes.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DVertexBufferX.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DViewportX.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DX.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\IDirectDrawSurfaceX.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\IDirectDrawTypes.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DExecuteBuffer.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DLight.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\IDirectDrawClipper.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\IDirectDrawColorControl.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\IDirectDrawFactory.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\IDirectDrawGammaControl.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\IDirectDrawPalette.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\IDirectDrawX.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\InterfaceQuery.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3D.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3D2.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3D3.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3D7.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DDevice.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DDevice2.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DDevice3.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DDevice7.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DMaterial.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DMaterial2.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DMaterial3.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DTexture.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DTexture2.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DVertexBuffer.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DVertexBuffer7.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DViewport.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DViewport2.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DViewport3.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDraw.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDraw2.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDraw3.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDraw4.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDraw7.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDrawSurface.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDrawSurface2.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDrawSurface3.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDrawSurface4.cpp" />
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDrawSurface7.cpp" />
+    <ClCompile Include="dxwrapper\DirectShow\IAMMediaStream.cpp" />
+    <ClCompile Include="dxwrapper\External\Hooking\Hook.cpp" />
+    <ClCompile Include="dxwrapper\External\Hooking\HotPatch.cpp" />
+    <ClCompile Include="dxwrapper\External\Hooking\IATPatch.cpp" />
+    <ClCompile Include="dxwrapper\External\Logging\Logging.cpp" />
+    <ClCompile Include="dxwrapper\External\MemoryModule\MemoryModule.c" />
+    <ClCompile Include="dxwrapper\GDI\Gdi32.cpp" />
+    <ClCompile Include="dxwrapper\GDI\User32.cpp" />
+    <ClCompile Include="dxwrapper\IClassFactory\IClassFactory.cpp" />
+    <ClCompile Include="dxwrapper\Libraries\d3dx9.cpp" />
+    <ClCompile Include="dxwrapper\libraries\dwmapi.cpp" />
+    <ClCompile Include="dxwrapper\libraries\uxtheme.cpp" />
+    <ClCompile Include="dxwrapper\libraries\winmm.cpp" />
+    <ClCompile Include="dxwrapper\Logging\Logging.cpp" />
+    <ClCompile Include="dxwrapper\Settings\ReadParse.cpp" />
+    <ClCompile Include="dxwrapper\Settings\Settings.cpp" />
+    <ClCompile Include="dxwrapper\Utils\Fullscreen.cpp" />
+    <ClCompile Include="dxwrapper\Utils\MyStrings.cpp" />
+    <ClCompile Include="dxwrapper\Utils\Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dd7to9.def" />
+    <None Include="dxwrapper\Settings\AllSettings.ini" />
+    <None Include="dxwrapper\Settings\Settings.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dd7to9.h" />
+    <ClInclude Include="dxwrapper\D3DDDI\d3dddiExternal.h" />
+    <ClInclude Include="dxwrapper\ddraw\AddressLookupTable.h" />
+    <ClInclude Include="dxwrapper\ddraw\d3d9ShaderPalette.h" />
+    <ClInclude Include="dxwrapper\ddraw\ddraw.h" />
+    <ClInclude Include="dxwrapper\ddraw\ddrawExternal.h" />
+    <ClInclude Include="dxwrapper\ddraw\DebugOverlay.h" />
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DDeviceX.h" />
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DMaterialX.h" />
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DTextureX.h" />
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DTypes.h" />
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DVertexBufferX.h" />
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DViewportX.h" />
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DX.h" />
+    <ClInclude Include="dxwrapper\ddraw\IDirectDrawSurfaceX.h" />
+    <ClInclude Include="dxwrapper\ddraw\IDirectDrawTypes.h" />
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DExecuteBuffer.h" />
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DLight.h" />
+    <ClInclude Include="dxwrapper\ddraw\IDirectDrawClipper.h" />
+    <ClInclude Include="dxwrapper\ddraw\IDirectDrawColorControl.h" />
+    <ClInclude Include="dxwrapper\ddraw\IDirectDrawFactory.h" />
+    <ClInclude Include="dxwrapper\ddraw\IDirectDrawGammaControl.h" />
+    <ClInclude Include="dxwrapper\ddraw\IDirectDrawPalette.h" />
+    <ClInclude Include="dxwrapper\ddraw\IDirectDrawX.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3D.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3D2.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3D3.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3D7.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DDevice.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DDevice2.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DDevice3.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DDevice7.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DMaterial.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DMaterial2.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DMaterial3.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DTexture.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DTexture2.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DVertexBuffer.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DVertexBuffer7.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DViewport.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DViewport2.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DViewport3.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDraw.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDraw2.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDraw3.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDraw4.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDraw7.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDrawSurface.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDrawSurface2.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDrawSurface3.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDrawSurface4.h" />
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDrawSurface7.h" />
+    <ClInclude Include="dxwrapper\DirectShow\IAMMediaStream.h" />
+    <ClInclude Include="dxwrapper\External\Hooking\Hook.h" />
+    <ClInclude Include="dxwrapper\External\Logging\Logging.h" />
+    <ClInclude Include="dxwrapper\External\MemoryModule\MemoryModule.h" />
+    <ClInclude Include="dxwrapper\GDI\GDI.h" />
+    <ClInclude Include="dxwrapper\GDI\Gdi32.h" />
+    <ClInclude Include="dxwrapper\GDI\User32.h" />
+    <ClInclude Include="dxwrapper\IClassFactory\IClassFactory.h" />
+    <ClInclude Include="dxwrapper\Libraries\d3dx9.h" />
+    <ClInclude Include="dxwrapper\libraries\dwmapi.h" />
+    <ClInclude Include="dxwrapper\libraries\uxtheme.h" />
+    <ClInclude Include="dxwrapper\libraries\winmm.h" />
+    <ClInclude Include="dxwrapper\Logging\Logging.h" />
+    <ClInclude Include="dxwrapper\Settings\ReadParse.h" />
+    <ClInclude Include="dxwrapper\Settings\Settings.h" />
+    <ClInclude Include="dxwrapper\Utils\Utils.h" />
+    <ClInclude Include="dxwrapper\Wrappers\winmm.h" />
+    <ClInclude Include="dxwrapper\Wrappers\wrapper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="dd7to9.rc" />
+    <ResourceCompile Include="dxwrapper\Dllmain\UALx86.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

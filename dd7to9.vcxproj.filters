@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Libraries">
+      <UniqueIdentifier>{9fc26822-b540-4070-82bc-320a8ccaec4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{a23457e0-30fc-48cc-a984-26f316b4cadf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Settings">
+      <UniqueIdentifier>{c1f95f1f-7745-47bd-9ffd-67b4c20d1eb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logging">
+      <UniqueIdentifier>{83902b61-6ee7-42ec-9601-3e16804fcd18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ddraw">
+      <UniqueIdentifier>{bfe7d7d5-d3af-4ef3-a6a1-3e3fc5e8ce4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ddraw\Versions">
+      <UniqueIdentifier>{f484f6f8-618e-41ab-9fe4-6034ff843072}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External">
+      <UniqueIdentifier>{ab08fa70-8ead-42f9-aaec-e1b6bfae77f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External\Logging">
+      <UniqueIdentifier>{5d8772ca-8723-4ffd-a0b5-75b9f545420f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External\Hooking">
+      <UniqueIdentifier>{5175dc21-9768-4e44-8840-288b7a3c143c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GDI">
+      <UniqueIdentifier>{9e2da775-deb8-4b6d-9178-e41800ff180e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="d3dddi">
+      <UniqueIdentifier>{120d0136-d207-48f0-b78f-8f22921a8836}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External\MemoryModule">
+      <UniqueIdentifier>{4ef6ed43-b70d-4706-a6d0-dd9b6b2d4cab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IClassFactory">
+      <UniqueIdentifier>{4c61e91a-e5f5-4cfd-98ef-f1483931fb8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DirectShow">
+      <UniqueIdentifier>{b5a5a722-9613-4588-8b70-376f298119e4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dxwrapper\libraries\dwmapi.cpp">
+      <Filter>Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\libraries\uxtheme.cpp">
+      <Filter>Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\libraries\winmm.cpp">
+      <Filter>Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\Utils\Utils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\Settings\Settings.cpp">
+      <Filter>Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\Libraries\d3dx9.cpp">
+      <Filter>Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\Logging\Logging.cpp">
+      <Filter>Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\Settings\ReadParse.cpp">
+      <Filter>Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\ddraw.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DExecuteBuffer.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DLight.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\IDirectDrawClipper.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\IDirectDrawColorControl.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\IDirectDrawFactory.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\IDirectDrawGammaControl.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\IDirectDrawPalette.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\InterfaceQuery.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\IDirectDrawTypes.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\IDirectDrawSurfaceX.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\IDirectDrawX.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DX.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DTypes.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DMaterialX.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DTextureX.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DVertexBufferX.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DViewportX.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\IDirect3DDeviceX.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3D.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3D2.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3D3.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3D7.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DDevice.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DDevice2.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DDevice3.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DDevice7.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DMaterial.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DMaterial2.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DMaterial3.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DTexture.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DTexture2.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DVertexBuffer.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DVertexBuffer7.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DViewport.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DViewport2.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirect3DViewport3.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDraw.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDraw2.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDraw3.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDraw4.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDraw7.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDrawSurface.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDrawSurface2.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDrawSurface3.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDrawSurface4.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\Versions\IDirectDrawSurface7.cpp">
+      <Filter>ddraw\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\External\Logging\Logging.cpp">
+      <Filter>External\Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\External\Hooking\Hook.cpp">
+      <Filter>External\Hooking</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\External\Hooking\HotPatch.cpp">
+      <Filter>External\Hooking</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\External\Hooking\IATPatch.cpp">
+      <Filter>External\Hooking</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\Utils\MyStrings.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\GDI\Gdi32.cpp">
+      <Filter>GDI</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\GDI\User32.cpp">
+      <Filter>GDI</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\D3DDDI\d3dddi.cpp">
+      <Filter>d3dddi</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\ddraw\DebugOverlay.cpp">
+      <Filter>ddraw</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\External\MemoryModule\MemoryModule.c">
+      <Filter>External\MemoryModule</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\Utils\Fullscreen.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="dd7to9.cpp" />
+    <ClCompile Include="dxwrapper\IClassFactory\IClassFactory.cpp">
+      <Filter>IClassFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="dxwrapper\DirectShow\IAMMediaStream.cpp">
+      <Filter>DirectShow</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dxwrapper\Settings\AllSettings.ini">
+      <Filter>Settings</Filter>
+    </None>
+    <None Include="dxwrapper\Settings\Settings.ini">
+      <Filter>Settings</Filter>
+    </None>
+    <None Include="dd7to9.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dxwrapper\ddraw\IDirectDrawTypes.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\IDirectDrawSurfaceX.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\AddressLookupTable.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\IDirectDrawX.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DX.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DTypes.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DMaterialX.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DTextureX.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DVertexBufferX.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DViewportX.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DDeviceX.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3D.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3D2.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3D3.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3D7.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DDevice.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DDevice2.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DDevice3.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DDevice7.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DMaterial.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DMaterial2.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DMaterial3.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DTexture.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DTexture2.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DVertexBuffer.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DVertexBuffer7.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DViewport.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DViewport2.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirect3DViewport3.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDraw.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDraw2.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDraw3.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDraw4.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDraw7.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDrawSurface.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDrawSurface2.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDrawSurface3.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDrawSurface4.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\Versions\IDirectDrawSurface7.h">
+      <Filter>ddraw\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\External\Logging\Logging.h">
+      <Filter>External\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\External\Hooking\Hook.h">
+      <Filter>External\Hooking</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\d3d9ShaderPalette.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\GDI\Gdi32.h">
+      <Filter>GDI</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\GDI\GDI.h">
+      <Filter>GDI</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\GDI\User32.h">
+      <Filter>GDI</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\D3DDDI\d3dddiExternal.h">
+      <Filter>d3dddi</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\DebugOverlay.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\Settings\Settings.h">
+      <Filter>Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\Libraries\d3dx9.h">
+      <Filter>Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\ddraw.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\ddrawExternal.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\Logging\Logging.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\Utils\Utils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\libraries\dwmapi.h">
+      <Filter>Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\IDirectDrawPalette.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DExecuteBuffer.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\IDirect3DLight.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\IDirectDrawClipper.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\IDirectDrawColorControl.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\IDirectDrawFactory.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\ddraw\IDirectDrawGammaControl.h">
+      <Filter>ddraw</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\Settings\ReadParse.h">
+      <Filter>Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\libraries\uxtheme.h">
+      <Filter>Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\libraries\winmm.h">
+      <Filter>Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\Wrappers\wrapper.h">
+      <Filter>Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\Wrappers\winmm.h">
+      <Filter>Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\External\MemoryModule\MemoryModule.h">
+      <Filter>External\MemoryModule</Filter>
+    </ClInclude>
+    <ClInclude Include="dxwrapper\IClassFactory\IClassFactory.h">
+      <Filter>IClassFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="dd7to9.h" />
+    <ClInclude Include="dxwrapper\DirectShow\IAMMediaStream.h">
+      <Filter>DirectShow</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="dxwrapper\Dllmain\UALx86.rc">
+      <Filter>Libraries</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="dd7to9.rc" />
+  </ItemGroup>
+</Project>
