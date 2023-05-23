@@ -470,6 +470,7 @@
     <ClInclude Include="dxwrapper\DirectShow\IAMMediaStream.h">
       <Filter>DirectShow</Filter>
     </ClInclude>
+    <ClInclude Include="Exports.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="dd7to9.rc" />

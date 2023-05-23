@@ -2,9 +2,6 @@
 
 #include "dxwrapper\Dllmain\dxwrapper.h"
 
-void LoadDd7to9(bool DisableLogging);
-void UnLoadDd7to9();
-
 // Undefine vars
 #undef APP_NAME
 #undef APP_DESCRPTION

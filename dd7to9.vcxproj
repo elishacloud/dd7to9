@@ -242,6 +242,7 @@
     <ClInclude Include="dxwrapper\Utils\Utils.h" />
     <ClInclude Include="dxwrapper\Wrappers\winmm.h" />
     <ClInclude Include="dxwrapper\Wrappers\wrapper.h" />
+    <ClInclude Include="Exports.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="dd7to9.rc" />

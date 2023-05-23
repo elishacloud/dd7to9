@@ -17,7 +17,7 @@
 #define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
 #include "ddraw\ddrawExternal.h"
-#include "dd7to9.h"
+#include "Exports.h"
 
 void StartDd7to9()
 {

@@ -16,7 +16,7 @@
 
 #define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
-#include "dd7to9.h"
+#include "Exports.h"
 
 // Dll main function
 bool APIENTRY DllMain(HMODULE hModule, DWORD fdwReason, LPVOID lpReserved)
