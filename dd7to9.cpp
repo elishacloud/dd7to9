@@ -40,99 +40,94 @@ bool Wrapper::ValidProcAddress(FARPROC)
 // Declare variables
 HMODULE hModule_dll = nullptr;
 
-// Dll main function
-bool APIENTRY DllMain(HMODULE hModule, DWORD fdwReason, LPVOID lpReserved)
+void LoadDd7to9(bool DisableLogging)
 {
-	UNREFERENCED_PARAMETER(lpReserved);
-
-	switch (fdwReason)
+	// Run function only once
+	static bool RunOnce = true;
+	if (!RunOnce)
 	{
-	case DLL_PROCESS_ATTACH:
+		return;
+	}
+	RunOnce = false;
+
+	// Get handle
+	GetModuleHandleEx(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT, (LPCTSTR)LoadDd7to9, &hModule_dll);
+
+	// Initialize config
+	Config.Init();
+
+	// Init logs
+	Logging::EnableLogging = !DisableLogging;
+	Logging::InitLog();
+	Logging::Log() << "Starting dd7to9 v" << APP_VERSION;
 	{
-		// Get handle
-		hModule_dll = hModule;
-
-		// Initialize config
-		Config.Init();
-
-		// Init logs
-		Logging::EnableLogging = !Config.DisableLogging;
-		Logging::InitLog();
-		Logging::Log() << "Starting dd7to9 v" << APP_VERSION;
-		{
-			char path[MAX_PATH];
-			GetModuleFileName(hModule, path, MAX_PATH);
-			Logging::Log() << "Running from: " << path;
-		}
-		Logging::LogComputerManufacturer();
-		Logging::LogVideoCard();
-		Logging::LogOSVersion();
-		Logging::LogProcessNameAndPID();
-		Logging::LogGameType();
-		Logging::LogCompatLayer();
-
-		Config.Dd7to9 = true;
-		Config.DisableHighDPIScaling = true;
-
-		// Set application compatibility options
-		if (Config.ResetScreenRes)
-		{
-			Utils::GetScreenSettings();
-		}
-		if (Config.DisableHighDPIScaling)
-		{
-			Utils::DisableHighDPIScaling();
-		}
-		if (Config.SingleProcAffinity)
-		{
-			Utils::SetProcessAffinity();
-		}
-		if (Config.DisableGameUX)
-		{
-			Utils::DisableGameUX();
-		}
-
-		// Start Dd7to9
-		if (Config.Dd7to9)
-		{
-			InitDDraw();
-			using namespace ddraw;
-			using namespace DdrawWrapper;
-			HMODULE d3d9_dll = LoadLibrary("d3d9.dll");
-			DdrawWrapper::Direct3DCreate9_out = GetProcAddress(d3d9_dll, "Direct3DCreate9");
-		}
-
-		// Loaded
-		Logging::Log() << "dd7to9 loaded!";
+		char path[MAX_PATH];
+		GetModuleFileName(hModule_dll, path, MAX_PATH);
+		Logging::Log() << "Running from: " << path;
 	}
-	break;
-	case DLL_THREAD_ATTACH:
-		break;
-	case DLL_THREAD_DETACH:
-		break;
-	case DLL_PROCESS_DETACH:
-		// Run all clean up functions
-		Config.Exiting = true;
-		Logging::Log() << "Quiting dd7to9";
+	Logging::LogComputerManufacturer();
+	Logging::LogVideoCard();
+	Logging::LogOSVersion();
+	Logging::LogProcessNameAndPID();
+	Logging::LogGameType();
+	Logging::LogCompatLayer();
 
-		// Unload DdrawWrapper
-		if (Config.Dd7to9)
-		{
-			ExitDDraw();
-		}
+	Config.Dd7to9 = true;
+	Config.DisableHighDPIScaling = true;
 
-		// Unhook all APIs
-		Hook::UnhookAll();
-
-		// Reset screen back to original Windows settings to fix some display errors on exit
-		if (Config.ResetScreenRes)
-		{
-			Utils::ResetScreenSettings();
-		}
-
-		// Final log
-		Logging::Log() << "dd7to9 terminated!";
-		break;
+	// Set application compatibility options
+	if (Config.ResetScreenRes)
+	{
+		Utils::GetScreenSettings();
 	}
-	return true;
+	if (Config.DisableHighDPIScaling)
+	{
+		Utils::DisableHighDPIScaling();
+	}
+	if (Config.SingleProcAffinity)
+	{
+		Utils::SetProcessAffinity();
+	}
+	if (Config.DisableGameUX)
+	{
+		Utils::DisableGameUX();
+	}
+
+	// Start Dd7to9
+	if (Config.Dd7to9)
+	{
+		InitDDraw();
+		using namespace ddraw;
+		using namespace DdrawWrapper;
+		HMODULE d3d9_dll = LoadLibrary("d3d9.dll");
+		DdrawWrapper::Direct3DCreate9_out = GetProcAddress(d3d9_dll, "Direct3DCreate9");
+	}
+
+	// Loaded
+	Logging::Log() << "dd7to9 loaded!";
+}
+
+void UnLoadDd7to9()
+{
+	// Run all clean up functions
+	Config.Exiting = true;
+	Logging::Log() << "Quiting dd7to9";
+
+	// Unload DdrawWrapper
+	if (Config.Dd7to9)
+	{
+		ExitDDraw();
+	}
+
+	// Unhook all APIs
+	Hook::UnhookAll();
+
+	// Reset screen back to original Windows settings to fix some display errors on exit
+	if (Config.ResetScreenRes)
+	{
+		Utils::ResetScreenSettings();
+	}
+
+	// Final log
+	Logging::Log() << "dd7to9 terminated!";
 }

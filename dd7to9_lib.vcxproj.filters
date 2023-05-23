@@ -243,14 +243,14 @@
     <ClCompile Include="dxwrapper\Utils\Fullscreen.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
-    <ClCompile Include="dd7to9.cpp" />
+    <ClCompile Include="dd7to9_lib.cpp" />
     <ClCompile Include="dxwrapper\IClassFactory\IClassFactory.cpp">
       <Filter>IClassFactory</Filter>
     </ClCompile>
     <ClCompile Include="dxwrapper\DirectShow\IAMMediaStream.cpp">
       <Filter>DirectShow</Filter>
     </ClCompile>
-    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="dd7to9.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dxwrapper\Settings\AllSettings.ini">
@@ -259,7 +259,7 @@
     <None Include="dxwrapper\Settings\Settings.ini">
       <Filter>Settings</Filter>
     </None>
-    <None Include="dd7to9.def" />
+    <None Include="dd7to9_lib.def" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dxwrapper\ddraw\IDirectDrawTypes.h">

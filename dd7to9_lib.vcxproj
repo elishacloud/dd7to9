@@ -11,18 +11,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{579E7FE7-2745-4100-A802-23511711FCDE}</ProjectGuid>
-    <RootNamespace>dd7to9</RootNamespace>
+    <ProjectGuid>{E204DCB3-D122-4F2E-88A8-89AC22CE3274}</ProjectGuid>
+    <RootNamespace>dd7to9_lib</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -41,12 +41,12 @@
     <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\lib\</OutDir>
     <IntDir>$(SolutionDir)bin\Intermediate\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>ddraw</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\lib\</OutDir>
     <IntDir>$(SolutionDir)bin\Intermediate\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>ddraw</TargetName>
   </PropertyGroup>
@@ -54,7 +54,7 @@
     <ClCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;DDRAW;ENABLE_DEBUGOVERLAY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <ObjectFileName>$(SolutionDir)bin\Intermediate\$(Configuration)\Object\%(RelativeDir)</ObjectFileName>
+      <ObjectFileName>$(SolutionDir)bin\Intermediate\$(Configuration)\Object_lib\%(RelativeDir)</ObjectFileName>
       <WarningLevel>Level4</WarningLevel>
       <AdditionalIncludeDirectories>$(ProjectDir)dxwrapper\;dxwrapper\Libraries;dxwrapper\Libraries\DirectX81SDK\include;dxwrapper\External\imgui</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -63,7 +63,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>detours.lib;dxguid.lib;msimg32.lib;oleacc.lib;uxtheme.lib;dwmapi.lib;wbemuuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ModuleDefinitionFile>dd7to9.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>dd7to9_lib.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>dxwrapper\Libraries\detours\lib</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -76,7 +76,7 @@
     <ClCompile>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;DDRAW;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <ObjectFileName>$(SolutionDir)bin\Intermediate\$(Configuration)\Object\%(RelativeDir)</ObjectFileName>
+      <ObjectFileName>$(SolutionDir)bin\Intermediate\$(Configuration)\Object_lib\%(RelativeDir)</ObjectFileName>
       <WarningLevel>Level4</WarningLevel>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>$(ProjectDir)dxwrapper\;dxwrapper\Libraries;dxwrapper\Libraries\DirectX81SDK\include;dxwrapper\External\imgui</AdditionalIncludeDirectories>
@@ -85,7 +85,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>detours.lib;dxguid.lib;msimg32.lib;oleacc.lib;uxtheme.lib;dwmapi.lib;wbemuuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ModuleDefinitionFile>dd7to9.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>dd7to9_lib.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>dxwrapper\Libraries\detours\lib</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -96,7 +96,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dd7to9.cpp" />
-    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="dd7to9_lib.cpp" />
     <ClCompile Include="dxwrapper\D3DDDI\d3dddi.cpp" />
     <ClCompile Include="dxwrapper\ddraw\ddraw.cpp" />
     <ClCompile Include="dxwrapper\ddraw\DebugOverlay.cpp" />
@@ -167,7 +167,7 @@
     <ClCompile Include="dxwrapper\Utils\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="dd7to9.def" />
+    <None Include="dd7to9_lib.def" />
     <None Include="dxwrapper\Settings\AllSettings.ini" />
     <None Include="dxwrapper\Settings\Settings.ini" />
   </ItemGroup>
